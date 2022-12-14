@@ -1,0 +1,462 @@
+@font-face {
+  font-family: 'GangwonEduSaeeum_OTFMediumA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f6f6f6;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'GangwonEduSaeeum_OTFMediumA';
+  min-height: 100vh;
+  /* 기본적으로 html에는 마진이 있어서 이렇게 마진0을 줘야함 */
+  margin: 0px;
+}
+/* 반응형 웹  650 이상 일때*/
+@media (min-width : 650px) {
+  .App {
+    width: 640px;
+  }
+}
+/* 반응형 웹  650 이하 일때*/
+@media (max-width : 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
+}
+
+.App {
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* MyButton */
+
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  /* 안에 폰트가 짤려서 두줄이 되지않게 */
+  white-space: nowrap;
+  font-family: 'GmarketSansMedium';
+}
+
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+
+.MyButton_positive {
+  background-color: #16A085;
+  color: white;
+}
+
+.MyButton_negative {
+  background-color: #E74C3C;
+  color: white;
+}
+
+/* header */
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+ 
+}
+
+header > div  {
+  display: flex;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 21px;
+  justify-content: center;
+  font-family: 'GmarketSansMedium';
+
+}
+
+
+header img {
+  padding-top:2px;
+  padding-left: 3px;
+  width: 25px;
+  height: 25px;
+}
+
+
+header .head_btn_left {
+  width: 25%;
+  justify-content: start;
+
+}
+
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+  font-family: 'GmarketSansMedium';
+}
+
+header button {
+  font-family: 'GmarketSansMedium';
+}
+
+/* banner */
+.MyBanner {
+  /* border: solid 1px black; */
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  font-family: 'GmarketSansMedium';
+  padding-bottom: 10px;
+}
+
+.MyBanner .ti-cursor {
+  margin-left: 0.1em;
+}
+
+
+/* diaryList */
+
+.DiaryList .menu_wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex; 
+  justify-content: space-between;
+}
+/* 남은 영역 모두 차지 */
+.DiaryList .menu_wrapper .right_col {
+  flex-grow: 1;
+}
+
+
+.DiaryList .menu_wrapper .right_col button{
+  width: 100%;
+}
+
+.DiaryList .ControlMenu {
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  cursor: pointer;
+  font-family: 'GmarketSansMedium';
+  font-size: 14px;
+
+  text-align: center;
+
+}
+
+
+.DiaryList .ControlMenu option {
+  position: absolute; 
+  padding: 3px 0;
+  border: none;
+}
+
+
+/* DiaryItem */
+
+.DiaryItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+  border-bottom: 1px solid #ececec;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper {
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.DiaryItem .emotion_img_wrapper_1{
+  background-color: #64c964;
+}
+
+.DiaryItem .emotion_img_wrapper_2{
+  background-color: #9dd772;
+}
+.DiaryItem .emotion_img_wrapper_3{
+  background-color: #fdce17;
+}
+.DiaryItem .emotion_img_wrapper_4{
+  background-color: #fd8446;
+}
+.DiaryItem .emotion_img_wrapper_5{
+  background-color: #fd565f;
+}
+
+.DiaryItem .emotion_img_wrapper img {
+  width: 50%;
+}
+
+.DiaryItem .info_wrapper {
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+
+.DiaryItem .diary_date {
+  font-family: 'GmarketSansMedium';
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.DiaryItem .diary_content_preview {
+  font-size: 21px;
+}
+
+.DiaryItem .btn_wrapper {
+  min-width: 70px;
+}
+
+
+.DiaryEditor section {
+  margin-bottom: 40px;
+}
+
+.DiaryEditor .emotion_list_wrapper {
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  gap:2%
+}
+
+.DiaryEditor h4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.DiaryEditor .input_date{
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: 'GmarketSansMedium';
+  font-size: 13px;
+}
+
+.DiaryEditor textarea{
+  font-family: 'GangwonEduSaeeum_OTFMediumA';
+  font-size: 23px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+
+  border:none;
+  border-radius: 5px;
+  background-color:#ececec;
+
+  padding:20px
+}
+
+.DiaryEditor .control_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* emotion item */
+
+.EmotionItem {
+  cursor: pointer;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.EmotionItem img {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.EmotionItem span {
+  font-size: 25px;
+}
+
+.EmotionItem_off {
+  background-color: #ececec;
+}
+
+.EmotionItem_on_1 {
+  background-color: #64c964;
+  color: white;
+}
+
+.EmotionItem_on_2 {
+  background-color: #9dd772;
+  color: white;
+}
+.EmotionItem_on_3{
+  background-color: #fdce17;
+  color: white;
+}
+.EmotionItem_on_4 {
+  background-color: #fd8446;
+  color: white;
+}
+.EmotionItem_on_5 {
+  background-color: #fd565f;
+  color: white;
+}
+
+/* diary */
+
+.DiaryPage section {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.DiaryPage h4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.DiaryPage .emotion_descript {
+  font-size: 25px;
+
+}
+
+.DiaryPage .diary_img_wrapper {
+  background-color: #ececec;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.DiaryPage .diary_img_wrapper_1 {
+  background-color: #64c964;
+  color: white;
+}
+
+.DiaryPage .diary_img_wrapper_2 {
+  background-color: #9dd772;
+  color: white;
+}
+.DiaryPage .diary_img_wrapper_3 {
+  background-color: #fdce17;
+  color: white;
+}
+.DiaryPage .diary_img_wrapper_4 {
+  background-color: #fd8446;
+  color: white;
+}
+.DiaryPage .diary_img_wrapper_5 {
+  background-color: #fd565f;
+  color: white;
+}
+
+.DiaryPage .emotin_descript {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.DiaryPage .diary_content_wrapper {
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 5px;
+  /* 단어를 쪼개서 줄바꾸지 말기 */
+  word-break: keep-all;
+  /* 강제로 줄바꿈 */
+  overflow-wrap: break-word;
+}
+
+.DiaryPage .diary_content_wrapper p {
+  padding: 20px;
+  text-align: left;
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+
+.MyFooter {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.MyFooter footer {
+  font-family: 'GmarketSansMedium';
+  font-size: 10px;
+  color: grey;
+  width: 100%;
+	height: 110px; /* 내용물에 따라 알맞는 값 설정 */
+	bottom: 0px;
+	position: absolute;
+
+}
+
+.MyFooter a{
+  text-decoration:none
+}
+
